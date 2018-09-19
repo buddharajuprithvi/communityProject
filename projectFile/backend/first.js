@@ -23,7 +23,7 @@ app.use(myParser.urlencoded({ extended: true }));
 app.use(myParser.json());
 
 app.post('/register',registerController.register);
-
+app.post('/authenticate',authenticateController.authenticate);
 /*app.post('/login', function (request, response) {
     response.setHeader('Content-Type', 'application/json');
     console.log("request : ", typeof request.body);
