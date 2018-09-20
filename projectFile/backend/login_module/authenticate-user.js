@@ -1,10 +1,6 @@
-const express = require('express')
 var Cryptr = require('cryptr');
 cryptr = new Cryptr('myTotalySecretKey');
-var connection = require('../db/config');
-var session = require('express-session');
-var myParser = require("body-parser");
-const app = express()
+require("../sessionHandle");
 
 module.exports.authenticate=function(req,res){
     var email=req.body.email;
